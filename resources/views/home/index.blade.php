@@ -23,6 +23,16 @@
                     <a href="">Contact</a>
                 </li>
 
+                @if (Route::has('login'))
+
+                @auth
+
+                <li>
+                    <a href="{{ url('/dashboard') }}" class="btn-success">{{Auth::user()->name}}</a>
+                </li>
+
+                @else
+
                 <li>
                     <a href="{{ route('register') }}" class="btn-success">Register</a>
                 </li>
@@ -30,25 +40,18 @@
                 <li>
                     <a href="{{ route('login') }}" class="btn btn-primary">Login</a>
                 </li>
+                @endauth
+
+                @endif
             </ul>
         </nav>
-        <div class="dev_deg">
-            <labe>About us</labe>
-            <p>Bootstrap (currently v3.3.7) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
-            <img src="1.jpg" height="300px" width="100%">
-        </div>
+        @foreach ($post as $post)
 
         <div class="dev_deg">
-            <labe>About us</labe>
-            <p>Bootstrap (currently v3.3.7) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
-            <img src="2.jpg" height="300px" width="100%">
+            <labe>{{$post->username}}</labe>
+            <p>{{$post->description}}</p>
+            <img src="post/{{$post->image}}" height="300px" width="100%">
         </div>
-
-        <div class="dev_deg">
-            <labe>About us</labe>
-            <p>Bootstrap (currently v3.3.7) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
-            <img src="3.jpg" height="300px" width="100%">
-        </div>
-
+        @endforeach
     </body>
 </html>
