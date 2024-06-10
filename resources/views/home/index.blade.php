@@ -38,17 +38,5 @@
             <img src="1.jpg" height="300px" width="100%">
         </div>
 
-        <div class="dev_deg">
-            <labe>About us</labe>
-            <p>Bootstrap (currently v3.3.7) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
-            <img src="2.jpg" height="300px" width="100%">
-        </div>
-
-        <div class="dev_deg">
-            <labe>About us</labe>
-            <p>Bootstrap (currently v3.3.7) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
-            <img src="3.jpg" height="300px" width="100%">
-        </div>
-
     </body>
 </html>
